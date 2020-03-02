@@ -1,6 +1,5 @@
-package service;
+package ru.Klimov.Ilya.service;
 
-import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class CalculationService {
@@ -19,6 +18,10 @@ public class CalculationService {
             }
         }
         return stack.pop();
+    }
+
+    public double calculate(String inputExpression){
+        return rpnToExpression(new ParsingService().expressionToRpn(inputExpression));
     }
 
     private void arithmeticOperation (double a, double b, String symbol) {

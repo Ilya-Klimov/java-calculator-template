@@ -1,10 +1,7 @@
-import exception.ArithmeticExpressionException;
-import exception.IllegalSymbolException;
-import exception.ParenthesesBalanceException;
-import service.CalculationService;
-import service.ParsingService;
-import service.ValidationService;
+package ru.Klimov.Ilya;
 
+import ru.Klimov.Ilya.exception.*;
+import ru.Klimov.Ilya.service.*;
 import java.util.Scanner;
 
 public class Main {
@@ -17,7 +14,6 @@ public class Main {
         boolean isYOrN;
         String inputExpression;
         String finish = "";
-
         while (!isFinish) {
             isYOrN = false;
             System.out.print("Введите выражение: ");
@@ -25,7 +21,7 @@ public class Main {
             if (new ValidationService().isArithmeticExpression(inputExpression)) {
                 if (!validationService.hasArithmeticOperationError(inputExpression) &&
                         (!validationService.hasAlternatingMathSymbols(inputExpression))) {
-                    System.out.println("Ответ: " + calculationService.rpnToExpression(new ParsingService().expressionToRpn(inputExpression)));
+                    System.out.println("Ответ: " + calculationService.calculate(inputExpression));
                 }
             }
             while (!isYOrN) {
@@ -42,4 +38,5 @@ public class Main {
             }
         }
     }
+
 }

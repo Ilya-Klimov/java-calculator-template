@@ -1,8 +1,6 @@
-package service;
+package ru.Klimov.Ilya.service;
 
-import exception.ArithmeticExpressionException;
-import exception.IllegalSymbolException;
-import exception.ParenthesesBalanceException;
+import  ru.Klimov.Ilya.exception.*;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

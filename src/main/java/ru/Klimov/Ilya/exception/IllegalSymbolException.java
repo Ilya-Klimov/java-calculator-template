@@ -1,4 +1,4 @@
-package exception;
+package ru.Klimov.Ilya.exception;
 
 public class IllegalSymbolException extends Exception {
     public IllegalSymbolException() {

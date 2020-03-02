@@ -1,4 +1,4 @@
-package exception;
+package ru.Klimov.Ilya.exception;
 
 public class ParenthesesBalanceException extends Exception {
     public ParenthesesBalanceException() {
